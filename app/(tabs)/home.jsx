@@ -1,12 +1,13 @@
-import { View, Text } from "react-native";
+import { View, Text, ScrollView } from "react-native";
 import React from "react";
 import Header from "./../../components/home/header";
 import Slider from "./../../components/home/slider";
 import Category from "./../../components/home/category";
+import PopularBuisness from "../../components/home/popularBuisness";
 
 export default function home() {
   return (
-    <View>
+    <ScrollView>
       {/* header */}
       <Header />
       {/* slider */}
@@ -14,6 +15,12 @@ export default function home() {
       {/* category */}
       <Category />
       {/* popular-buisness */}
-    </View>
+      <PopularBuisness />
+      <View
+        style={{
+          height: 20,
+        }}
+      ></View>
+    </ScrollView>
   );
 }
